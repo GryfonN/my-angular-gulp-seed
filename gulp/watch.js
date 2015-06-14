@@ -23,7 +23,7 @@ module.exports = function (options) {
     gulp.watch([options.src + '/*.html', 'bower.json'], options.gulpWatch, ['injectAndReload']);
 
     //LESS
-    gulp.watch(options.src + '/app/**/*.less', options.gulpWatch, ['injectAndReload']);
+    gulp.watch(options.src + '/app/**/*.less', options.gulpWatch, ['less']);
 
     //CSS
     gulp.watch(options.src + '/app/**/*.css', options.gulpWatch, function (event) {
