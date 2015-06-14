@@ -20,9 +20,10 @@ module.exports = function (options) {
   gulp.task('watch', ['inject'], function () {
 
     //HTML index.html only
-    gulp.watch([options.src + '/*.html', 'bower.json'], options.gulpWatch, function (event) {
-      gulp.start('injectAndReload');
-    });
+    gulp.watch([options.src + '/*.html', 'bower.json'], options.gulpWatch, ['injectAndReload']);
+
+    //LESS
+    gulp.watch(options.src + '/app/**/*.less', options.gulpWatch, ['injectAndReload']);
 
     //CSS
     gulp.watch(options.src + '/app/**/*.css', options.gulpWatch, function (event) {
