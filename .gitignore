@@ -1,6 +1,9 @@
 .idea/
 *.iml
 
+# mam less job kt generuje csska
+**/*.css
+
 node_modules/
 bower_components/
 .sass-cache/
